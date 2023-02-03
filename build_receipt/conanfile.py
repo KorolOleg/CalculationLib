@@ -3,16 +3,14 @@ import os
 
 
 class CalculationLibrary(ConanFile):
-    name = "CalculationLibrary"
+    name = "CalculationLib"
     version = "1.0"
-
-    # Binary configuration
     settings = "os", "compiler", "build_type", "arch"
 
     def source(self):
         print("source")
         git = tools.Git(self.source_folder)
-        git.clone("https://github.com/KorolOleg/conan_poc.git")
+        git.clone("git@github.com:KorolOleg/CalculationLib.git")
 
     def build(self):
         print("build")
