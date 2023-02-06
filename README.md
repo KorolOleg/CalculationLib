@@ -1,4 +1,16 @@
+### Main ideas
+#### Project structure
+Root contains CMakeLists wrapper (enable/disable tests, set compiler flags applied project-wise)
+- sxt_calc - library for the packaging and distribution
+- test - unit tests
+- test_package - verify correct packaging and distribution
+
+#### Workflow
+[workflow](docs/steps.md)
+
+
 #### 3rd party dependencies
+With "yes" marked dependencies that are included to the lib,
 
 | dependency                            |    version    | conan |
 |---------------------------------------|:-------------:|------:|
@@ -11,8 +23,4 @@
 | Catch2                                |       |       |
 | Trompeloeil                           |       |       |
 
-
-https://github.com/nlohmann/json
-
-check if there are corresponding packages in Conan:  
 https://conan.io/

@@ -2,6 +2,7 @@
 https://docs.conan.io/en/latest/getting_started.html  
 https://docs.conan.io/en/latest/creating_packages/getting_started.html  
 https://github.com/conan-io/cmake-conan  
+https://conan.io/
 
 
 #### info
