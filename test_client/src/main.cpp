@@ -1,4 +1,4 @@
-#include <sxt_calc.h>
+#include "sxt_calc/sxt_calc.h"
 
 int main() {
     sxt_calc::hello();
