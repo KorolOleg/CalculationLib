@@ -30,3 +30,11 @@ python -m pip install --upgrade pip
 UPDATE: not working with CLion 2022.2
 https://blog.jetbrains.com/clion/2019/05/getting-started-with-the-conan-clion-plugin/
 https://docs.conan.io/en/latest/integrations/ide/clion.html
+7. setup conan profile (optional)
+8. Packaging of the development tools
+ ex. CMake, etc
+9. conan remote
+`conan remote add conan-myName https://bintray.com/myName/conan-myName`
+`conan upload package-name/version@user/stable -r conan_myName --all`
+
+conan cmake generators

@@ -35,4 +35,4 @@ class CalculationLib(ConanFile):
         print("package_info")
         self.cpp_info.libs = ["CalculationLib"]
         self.cpp_info.libdirs = ["lib"]
-        self.cpp_info.includedirs = ["inc"]
+        self.cpp_info.includedirs = ["include"]

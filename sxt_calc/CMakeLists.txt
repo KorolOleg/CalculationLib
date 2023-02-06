@@ -25,7 +25,7 @@ conan_cmake_autodetect(settings)
 # You can pass all the arguments that the command supports. Also, you can pass the auto-detected settings
 #   https://docs.conan.io/en/latest/reference/commands/consumer/install.html
 #       path_or_reference - Path to a folder containing a recipe
-conan_cmake_install(PATH_OR_REFERENCE ${PROJECT_SOURCE_DIR}/sxt_calc
+conan_cmake_install(PATH_OR_REFERENCE ${CMAKE_CURRENT_SOURCE_DIR}/
         INSTALL_FOLDER ${CMAKE_BINARY_DIR}
         BUILD missing
         REMOTE conancenter
@@ -37,12 +37,12 @@ find_package(nlohmann_json 3.10.3 REQUIRED)
 
 add_library(${PROJECT_NAME}
         ${CMAKE_SOURCE_DIR}/sxt_calc/src/sxt_calc.cpp
-        ${CMAKE_SOURCE_DIR}/sxt_calc/include/sxt_calc_impl.h
-        ${CMAKE_SOURCE_DIR}/sxt_calc/include/sxt_calc/sxt_calc.h
+        ${CMAKE_SOURCE_DIR}/sxt_calc/src/sxt_calc_impl.h
+        ${CMAKE_SOURCE_DIR}/sxt_calc/src/include/sxt_calc/sxt_calc.h
 )
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_20)
 target_include_directories(${PROJECT_NAME} PUBLIC
-        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/sxt_calc/include>
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/include/>
         $<INSTALL_INTERFACE:include>
 )
 
