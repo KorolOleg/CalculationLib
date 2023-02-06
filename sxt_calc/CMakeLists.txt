@@ -33,7 +33,9 @@ conan_cmake_install(PATH_OR_REFERENCE ${CMAKE_CURRENT_SOURCE_DIR}/
 )
 
 
+### 3rd party
 find_package(nlohmann_json 3.10.3 REQUIRED)
+find_package(Boost 1.81.0 COMPONENTS date_time iostreams system program_options)
 
 add_library(${PROJECT_NAME}
         ${CMAKE_SOURCE_DIR}/sxt_calc/src/sxt_calc.cpp
@@ -46,5 +48,6 @@ target_include_directories(${PROJECT_NAME} PUBLIC
         $<INSTALL_INTERFACE:include>
 )
 
+target_link_libraries(${PROJECT_NAME} PRIVATE Boost::date_time Boost::iostreams Boost::system Boost::program_options)
 target_link_libraries(${PROJECT_NAME} PRIVATE nlohmann_json::nlohmann_json)
 add_library(${PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})

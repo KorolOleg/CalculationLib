@@ -1,3 +1,9 @@
+#### refs
+https://docs.conan.io/en/latest/getting_started.html  
+https://docs.conan.io/en/latest/creating_packages/getting_started.html  
+https://github.com/conan-io/cmake-conan  
+
+
 #### info
 cd cmake-build-debug
 vim conanbuildinfo.txt

@@ -7,7 +7,8 @@ class CalculationLib(ConanFile):
     version = "1.0"
     settings = "os", "compiler", "build_type", "arch"
 
-    requires = [("nlohmann_json/3.10.3")]
+    requires = [("nlohmann_json/3.10.3"),
+                ("boost/1.81.0")]
 
     ## cmake generator, creates conanbuildinfo.cmake file that defines CMake variables
     ## including paths and library names that can be used in our build.
