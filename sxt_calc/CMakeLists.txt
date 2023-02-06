@@ -40,6 +40,7 @@ add_library(${PROJECT_NAME}
         ${CMAKE_SOURCE_DIR}/sxt_calc/include/sxt_calc_impl.h
         ${CMAKE_SOURCE_DIR}/sxt_calc/include/sxt_calc/sxt_calc.h
 )
+target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_20)
 target_include_directories(${PROJECT_NAME} PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/sxt_calc/include>
         $<INSTALL_INTERFACE:include>
