@@ -1,0 +1,9 @@
+{
+    "version": 4,
+    "vendor": {
+        "conan": {}
+    },
+    "include": [
+        "/home/olegkorol/dev/play_ground/CalculationLib/test_package/build/Release/generators/CMakePresets.json"
+    ]
+}

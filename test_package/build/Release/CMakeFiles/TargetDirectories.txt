@@ -1,0 +1,3 @@
+/home/olegkorol/dev/play_ground/CalculationLib/test_package/build/Release/CMakeFiles/testCalculationLibPackage.dir
+/home/olegkorol/dev/play_ground/CalculationLib/test_package/build/Release/CMakeFiles/edit_cache.dir
+/home/olegkorol/dev/play_ground/CalculationLib/test_package/build/Release/CMakeFiles/rebuild_cache.dir

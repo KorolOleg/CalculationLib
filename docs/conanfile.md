@@ -1,1 +1,0 @@
-https://docs.conan.io/en/latest/reference/conanfile.html

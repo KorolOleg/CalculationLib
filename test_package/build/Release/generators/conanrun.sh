@@ -1,0 +1,1 @@
+. "/home/olegkorol/dev/play_ground/CalculationLib/test_package/build/Release/generators/conanrunenv-release-x86_64.sh"

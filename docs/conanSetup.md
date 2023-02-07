@@ -36,5 +36,3 @@ https://docs.conan.io/en/latest/integrations/ide/clion.html
 9. conan remote
 `conan remote add conan-myName https://bintray.com/myName/conan-myName`
 `conan upload package-name/version@user/stable -r conan_myName --all`
-
-conan cmake generators

@@ -1,0 +1,7 @@
+1. [setup conan](../conanSetup.md)
+2. [setup recipy file](../recipy_file.md)
+2. [install library dependencies](../install_dependencies.md)
+3. [local package development](../local_workflow.md)
+3. [packaging](../package_generation.md)
+4. [testing]()
+3. [generate package for distribution](package_generation.md)

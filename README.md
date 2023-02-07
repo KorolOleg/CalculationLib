@@ -1,12 +1,7 @@
 ### Main ideas
-#### Project structure
-Root contains CMakeLists wrapper (enable/disable tests, set compiler flags applied project-wise)
-- sxt_calc - library for the packaging and distribution
-- test - unit tests
-- test_package - verify correct packaging and distribution
 
-#### Workflow
-[workflow](docs/steps.md)
+#### Workflows
+[new_package_creation](docs/workflows/new_package_creation.md)
 
 
 #### 3rd party dependencies

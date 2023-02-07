@@ -1,0 +1,1 @@
+https://help.sonatype.com/repomanager3/nexus-repository-administration/formats/conan-repositories

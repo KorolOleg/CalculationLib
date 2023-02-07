@@ -1,8 +1,30 @@
-from conans import ConanFile, CMake
+import os
 
-class CalculationService(ConanFile):
-    name = "CalculationLibTestPackage"
-    version = "1.0"
+from conan import ConanFile
+from conan.tools.cmake import CMake, cmake_layout
+from conan.tools.build import cross_building
+
+
+class TestCalculationLibPackage(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
-    requires = "CalculationLib/1.0"
-    generators = "cmake", "cmake_find_package"
+    # VirtualBuildEnv and VirtualRunEnv can be avoided if "tools.env.virtualenv:auto_use" is defined
+    # (it will be defined in Conan 2.0)
+    # generators = "CMakeDeps", "CMakeToolchain", "VirtualBuildEnv", "VirtualRunEnv"
+    # apply_env = False
+    test_type = "explicit"
+
+    def requirements(self):
+        self.requires(self.tested_reference_str)
+
+    def build(self):
+        cmake = CMake(self)
+        cmake.configure()
+        cmake.build()
+
+    def layout(self):
+        cmake_layout(self)
+
+    def test(self):
+        if not cross_building(self):
+            cmd = os.path.join(self.cpp.build.bindirs[0], "testCalculationLibPackage")
+            self.run(cmd, env="conanrun")
