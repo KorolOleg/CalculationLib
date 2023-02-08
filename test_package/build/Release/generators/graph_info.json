@@ -6,7 +6,7 @@
   ],
   [
    "CalculationLib:shared",
-   "False"
+   "True"
   ],
   [
    "boost:addr2line_location",
@@ -39,10 +39,6 @@
   [
    "boost:extra_b2_flags",
    "None"
-  ],
-  [
-   "boost:fPIC",
-   "True"
   ],
   [
    "boost:filesystem_no_deprecated",
@@ -118,7 +114,7 @@
   ],
   [
    "boost:shared",
-   "False"
+   "True"
   ],
   [
    "boost:system_no_deprecated",

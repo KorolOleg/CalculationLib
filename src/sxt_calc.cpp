@@ -4,6 +4,8 @@
 
 #include <boost/date_time.hpp>
 
+#include <boost/system/error_code.hpp>
+
 
 std::wstring FormatTime(boost::posix_time::ptime now)
 {
@@ -18,11 +20,22 @@ std::wstring FormatTime(boost::posix_time::ptime now)
 }
 
 
+// https://theboostcpplibraries.com/boost.system
+using namespace boost::system;
+void fail(error_code &ec)
+{
+    ec = errc::make_error_code(errc::not_supported);
+}
+
 namespace sxt_calc {
     void hello() {
         helloImpl();
         using namespace boost::posix_time;
         ptime now = second_clock ::universal_time();
         std::wcout << FormatTime(now) << '\n';
+
+        error_code ec;
+        fail(ec);
+        std::cout << ec.value() << '\n';
     }
 }

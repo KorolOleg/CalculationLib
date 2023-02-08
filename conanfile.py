@@ -15,12 +15,15 @@ class CalculationLib(ConanFile):
     # Binary configuration
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared": [True, False], "fPIC": [True, False]}
-    default_options = {"shared": False, "fPIC": True}
+    default_options = {"shared": True, "fPIC": True}
 
     exports_sources = "CMakeLists.txt", "src/*"
 
     requires = [("nlohmann_json/3.10.3"),
                 ("boost/1.81.0")]
+
+    # https://github.com/conan-io/conan/issues/3663
+    # default_options = "boost:shared=True"
 
     # https://docs.conan.io/en/latest/developing_packages/package_layout.html#package-layout
     def layout(self):
@@ -30,6 +33,9 @@ class CalculationLib(ConanFile):
         self.folders.build = "cmake-build-{}".format(build_type)
         self.folders.generators = os.path.join(self.folders.build, "generators")
 
+    def configure(self):
+        # https://docs.conan.io/en/latest/mastering/conditional.html
+        self.options["boost"].shared = True
 
     # generators = "CMakeToolchain"
     # https://docs.conan.io/en/latest/migrating_to_2.0/recipes.html#the-generate-method
@@ -56,6 +62,7 @@ class CalculationLib(ConanFile):
         self.copy("src/include/*", dst="include/sxt_calc", keep_path=False)
         self.copy("*.a", dst="lib", keep_path=False)
         self.copy("*.lib", dst="lib", keep_path=False)
+        self.copy("*.so", dst="lib", keep_path=False)
 
     # information for consumers
     def package_info(self):

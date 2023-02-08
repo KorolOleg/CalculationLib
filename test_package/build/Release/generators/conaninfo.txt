@@ -21,8 +21,8 @@
     os=Linux
 
 [full_requires]
-    CalculationLib/1.0:a3fdedbb861fa07c3ffd02177cbb7d6cdcaba8e6
-    boost/1.81.0:9bb382e9c85821936d59f1c4ea5134768df38de2
+    CalculationLib/1.0:e49dda6dc25b1729db3a13130b7393c21933ba45
+    boost/1.81.0:07f1f78785642cff6a18f442cbe521bc25666522
     bzip2/1.0.8:c32092bf4d4bb47cf962af898e02823f499b017e
     libbacktrace/cci.20210118:dfbe50feef7f3c6223a476cd5aeadb687084a646
     nlohmann_json/3.10.3:5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9
@@ -30,7 +30,7 @@
 
 [full_options]
     CalculationLib:fPIC=True
-    CalculationLib:shared=False
+    CalculationLib:shared=True
     boost:addr2line_location=/usr/bin/addr2line
     boost:asio_no_deprecated=False
     boost:buildid=None
@@ -39,7 +39,6 @@
     boost:diagnostic_definitions=False
     boost:error_code_header_only=False
     boost:extra_b2_flags=None
-    boost:fPIC=True
     boost:filesystem_no_deprecated=False
     boost:filesystem_use_std_fs=False
     boost:filesystem_version=None
@@ -58,7 +57,7 @@
     boost:python_executable=None
     boost:python_version=None
     boost:segmented_stacks=False
-    boost:shared=False
+    boost:shared=True
     boost:system_no_deprecated=False
     boost:system_use_utf8=False
     boost:visibility=hidden
