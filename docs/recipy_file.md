@@ -8,6 +8,9 @@ mkdir package_dir && cd package_dir
 conan new package_name/0.1 --template=cmake_lib
 ```
 
+### layout
+https://docs.conan.io/en/latest/reference/conanfile/methods.html#conanfile-layout
+
 ### key elements
 
 #### cmake integration

@@ -3,7 +3,6 @@ cd path_with_conanfile.py
 conan create .
 ```
 
-TODO specify user & channel  
-
-conan package identifier:  
-package_name/package_version@user/channel
+package creation is described: 
+https://docs.conan.io/en/latest/developing_packages/package_layout.html#package-layout  
+https://docs.conan.io/en/latest/creating_packages/understand_packaging.html#package-creation-process  

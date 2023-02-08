@@ -3,8 +3,6 @@ project(CalculationLib VERSION 1.0)
 
 set(CMAKE_CXX_STANDARD 20)
 
-#list(APPEND CMAKE_MODULE_PATH ${CMAKE_BINARY_DIR})
-
 find_package(nlohmann_json 3.10.3 REQUIRED)
 find_package(Boost 1.81.0 COMPONENTS date_time iostreams system program_options)
 
